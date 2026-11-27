@@ -2,7 +2,7 @@ name: VeriNews AI - Python and frontend validation
 
 on:
   push:
-    branches: [main, migration/html-css-js]
+    branches: [main, migration/html-css-js-python]
   pull_request:
     branches: [main]
 
