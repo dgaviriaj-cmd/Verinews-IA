@@ -4,9 +4,9 @@
 - Do not push changes directly to `main`.
 - Work exclusively in `migration/html-css-js-python`, created from `main`.
 - Keep each phase reviewable. Use pull requests to merge only after manual validation.
-- This is an academic project, not a commercial service. Avoid billing-dependent hosting, paid runners, paid cloud services, and payment setup.
-- GitHub Actions workflows have been removed from this migration branch because hosted-runner access is blocked by account billing. Validate locally with documented commands instead.
-- Hosting/deployment is optional and must use a no-cost solution only if available and suitable; focus first on a locally runnable academic web app.
+- This is an academic project, not a commercial service. Do not configure subscriptions, paid hosting, paid runners, or external services requiring payment.
+- GitHub Actions workflows have been removed from this migration branch. Validate locally with documented commands instead.
+- Hosting/deployment is optional. Focus first on a locally runnable academic web app; if deployment is later needed, use a genuinely free option.
 
 ## Target stack
 - Frontend target: semantic HTML5, CSS3, vanilla JavaScript.
