@@ -6,6 +6,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // GitHub Pages serves this repository from a subpath; keep local development at root.
+    base: process.env.GITHUB_PAGES === 'true' ? '/Verinews-IA/' : '/',
     plugins: [
       react(),
       tailwindcss(),
