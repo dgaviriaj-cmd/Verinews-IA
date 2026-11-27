@@ -2,13 +2,20 @@ name: VeriNews AI - Python and frontend validation
 
 on:
   push:
-    branches: [main, migration/html-css-js-python]
+    branches:
+      - main
+      - migration/html-css-js-python
   pull_request:
-    branches: [main]
+    branches:
+      - main
+
+permissions:
+  contents: read
 
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -23,7 +30,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22.16.0"
+          node-version: "22"
       - name: Install frontend dependencies
         run: npm install
       - name: Build current frontend baseline
