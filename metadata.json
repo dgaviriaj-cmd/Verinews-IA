@@ -1,0 +1,6 @@
+{
+  "name": "VeriNews AI — Arquitectura MVC y Metodología Cascada",
+  "description": "Sistema inteligente para la detección de noticias falsas en español con arquitectura Modelo-Vista-Controlador y gestión estructurada del ciclo de vida en cascada.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
