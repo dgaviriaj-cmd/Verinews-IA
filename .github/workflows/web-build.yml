@@ -1,0 +1,30 @@
+name: VeriNews AI - Python and frontend validation
+
+on:
+  push:
+    branches: [main, migration/html-css-js]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+      - name: Verify backend syntax
+        run: python -m py_compile app.py
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.16.0"
+      - name: Install frontend dependencies
+        run: npm install
+      - name: Build current frontend baseline
+        run: npm run build
